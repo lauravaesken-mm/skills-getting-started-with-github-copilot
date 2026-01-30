@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const participantsList = details.participants
           .map(email => `<li>${email}</li>`)
           .join("");
+        const participantCount = details.participants.length;
 
         activityCard.innerHTML = `
           <h4>${name}</h4>
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
           <div class="participants-section">
             <strong>Participants list:</strong>
+            <span class="participants-count">${participantCount} registered</span>
             <ul class="participants-list">
               ${participantsList}
             </ul>
